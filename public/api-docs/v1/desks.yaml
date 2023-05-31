@@ -1,0 +1,48 @@
+DeskElastic:
+  type: object
+  properties:
+    id:
+      type: integer
+      example: 1
+    name:
+      type: string
+      example: Ivan
+  required:
+    - id
+    - name
+
+SearchDesksRequest:
+  type: object
+  properties:
+    sort:
+      type: object
+      properties:
+        field:
+          type: string
+          example: desc
+    filter:
+      type: object
+      properties:
+        field:
+          type: string
+          example: query
+    pagination:
+      type: object
+      properties:
+        limit:
+          type: integer
+          example: 10
+        offset:
+          type: integer
+          example: 0
+
+SearchDesksResponse:
+  type: object
+  properties:
+    data:
+      type: array
+      items:
+        $ref: '#/DeskElastic'
+  required:
+    - data
+
