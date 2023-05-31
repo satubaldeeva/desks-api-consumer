@@ -1,0 +1,22 @@
+DesksSearch:
+  post:
+    tags:
+      - desks
+    operationId: searchDesks
+    summary: Search Desks
+    description: Search Desks
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: './desks.yaml#/SearchDesksRequest'
+    responses:
+      '200':
+        description: Successful
+        content:
+          application/json:
+            schema:
+              $ref: './desks.yaml#/SearchDesksResponse'
+      '400':
+        description: Bad request

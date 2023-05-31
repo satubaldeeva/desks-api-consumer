@@ -1,0 +1,12 @@
+openapi: 3.0.3
+info:
+  title: Desks Consumer - OpenAPI 3.0
+  version: 1.0.11
+servers:
+  - url: /api/v1/
+tags:
+  - name: desks
+    description: Desks
+paths:
+  /desks:search:
+    $ref: './paths.yaml#/DesksSearch'
